@@ -4,178 +4,191 @@
 {% block body %}
 
 <div class="container">
-  <div class="page-header">
-    <h1 class="text-center">DK SIM</h1>
-  </div>
-    <p>DKSIM is a statistical concrete structure corrosion damage and maintenance simulator
-                    created by Jacob Bumgardner and David Stolfo
-    Click the section headings to learn about how to use the simulation</p>
+    <div style="border: 2px solid #006dcc">
+      <div class="page-header">
+        <h1 class="text-center">DK SIM</h1>
+      </div>
+        <p>DKSIM is a statistical concrete structure corrosion damage and maintenance simulator
+                        created by Jacob Bumgardner and David Stolfo
+        Click the section headings to learn about how to use the simulation.
+        For more information or for help using DKSIM please contact Jacob Bumgardner at jake.bumardner@gmail.com or call at
+            (413)687-4020</p>
     </div>
+</div>
+
+<div class="container"><div class="col-xs" style="height:50px;"></div></div>
+
+<!-- Structure Characteristics Things-->
+
 <div class = "container">
-    <hr class="divider">
-    <h2 id="meow" class="text-center"> Structure Characteristics</h2>
-    <hr class="divider">
-    <h3> Structure Type</h3>
-    <p> Select the type of structure you would like to simulate</p>
-    <div class = "tab">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#bridgedeck" data-toggle="tab">Bridge Deck</a></li>
-            <li><a href="#substructure" data-toggle="tab">Substructure</a></li>
-            <li><a href="#structuremanual" data-toggle="tab">Manual</a></li>
-        </ul>
-        <!-- Bridge Deck Tab Section-->
-        <div class="tab-content">
-            <div id="bridgedeck" class="tab-pane fade in active">
-                <h3> Deck Simulation Size Inputs</h3>
-                <div class="ssi">
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="squarefootage">Square Footage</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="squarefootage" placeholder="10000">
-                            <div class="input-group-addon">ft^2</div>
+    <div style="border: 2px solid #006dcc">
+        <h2 id="meow" class="text-center"> Structure Characteristics</h2>
+        <hr class="divider">
+        <h3> Structure Type</h3>
+        <p> Select the type of structure you would like to simulate</p>
+        <div class = "tab">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#bridgedeck" data-toggle="tab">Bridge Deck Simulation</a></li>
+                <li><a href="#substructure" data-toggle="tab">Substructure Simulation</a></li>
+                <li><a href="#structuremanual" data-toggle="tab">Manual</a></li>
+            </ul>
+            <!-- Bridge Deck Tab Section-->
+            <div class="tab-content">
+                <div id="bridgedeck" class="tab-pane fade in active">
+                    <h3> Deck Simulation Size Inputs</h3>
+                    <div class="ssi">
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="squarefootage">Square Footage</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="squarefootage" placeholder="10000">
+                                <div class="input-group-addon">ft^2</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
-                    <h3> Bridge Deck Maintenance Costs</h3>
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="perimeter">Repair Size</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="repair_size" placeholder="10">
-                            <div class="input-group-addon">ft^2</div>
+                        </form>
+                        <h3> Bridge Deck Maintenance Costs</h3>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="perimeter">Repair Size</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="repair_size" placeholder="10">
+                                <div class="input-group-addon">ft^2</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="repair_cost">Repair Cost</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="repair_cost" placeholder="1000">
-                            <div class="input-group-addon">Dollars</div>
+                        </form>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="repair_cost">Repair Cost</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="repair_cost" placeholder="1000">
+                                <div class="input-group-addon">Dollars</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div id="substructure" class="tab-pane fade">
-                <h3> Substructure Simulation Size inputs</h3>
-                    <div class="ssi"  id="substructure">
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="perimeter">Column Perimeter</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="perimeter" placeholder="10">
-                            <div class="input-group-addon">feet</div>
+                <div id="substructure" class="tab-pane fade">
+                    <h3> Substructure Simulation Size inputs</h3>
+                        <div class="ssi"  id="substructure">
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="perimeter">Column Perimeter</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="perimeter" placeholder="10">
+                                <div class="input-group-addon">feet</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="czh">Corrosion Zone Height</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="czh" placeholder="10">
-                            <div class="input-group-addon">feet</div>
+                        </form>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="czh">Corrosion Zone Height</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="czh" placeholder="10">
+                                <div class="input-group-addon">feet</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="noc">Number of columns</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="noc" placeholder="1000">
-                            <div class="input-group-addon">feet</div>
+                        </form>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="noc">Number of columns</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="noc" placeholder="1000">
+                                <div class="input-group-addon">feet</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
-                    <h3> Maintenance Costs</h3>
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="perimeter">Jacket Replacement Period</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="replacement_period" placeholder="25">
-                            <div class="input-group-addon">years</div>
+                        </form>
+                        <h3> Maintenance Costs</h3>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="perimeter">Jacket Replacement Period</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="replacement_period" placeholder="25">
+                                <div class="input-group-addon">years</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="perimeter">Jacket Cost</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="jacket_cost" placeholder="10000">
-                            <div class="input-group-addon">dollars</div>
+                        </form>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="perimeter">Jacket Cost</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="jacket_cost" placeholder="10000">
+                                <div class="input-group-addon">dollars</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div id="structuremanual" class="tab-pane fade">
-                <h3> Manual Entry Size Inputs</h3>
-                  <div class="ssi" id="structuremanual">
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="sfpe">Square Footage Per Element</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="sfpe" placeholder="10000">
-                            <div class="input-group-addon">ft^2</div>
+                <div id="structuremanual" class="tab-pane fade">
+                    <h3> Manual Entry Size Inputs</h3>
+                      <div class="ssi" id="structuremanual">
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="sfpe">Square Footage Per Element</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="sfpe" placeholder="10000">
+                                <div class="input-group-addon">ft^2</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="noe">Number of Elements</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="noe" placeholder="1000">
-                            <div class="input-group-addon">#</div>
+                        </form>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="noe">Number of Elements</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="noe" placeholder="1000">
+                                <div class="input-group-addon">#</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
-                    <h3>Maintenance Costs</h3>
-                    <form class="form-inline">
-                      <div class="form-group">
-                          <div><label for="repair_cost">Repair Cost Per Element</label></div>
-                          <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="repair_cost" placeholder="1000">
-                            <div class="input-group-addon">Dollars</div>
+                        </form>
+                        <h3>Maintenance Costs</h3>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <div class="text-center"><label for="repair_cost">Repair Cost Per Element</label></div>
+                              <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="repair_cost" placeholder="1000">
+                                <div class="input-group-addon">Dollars</div>
+                              </div>
                           </div>
-                      </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<div class="col-xs" style="height:50px;"></div>
+
+<!-- corrosion parameter things-->
+
 <div class = "container">
-    <hr class="divider">
-    <div class = "span12"><h2 class="text-center">Corrosion Parameters</h2></div>
-    <hr class="divider">
-    <h3> Cover depth</h3>
-    <form class="form-inline">
-        <div>
-        <div class="form-group">
-            <div><label for="cover_mean">Cover Depth Mean</label></div>
-            <div class = "input-group">
-                <div class="input-group-addon"></div>
-                <input type="text" class="form-control" id="cover_mean" placeholder="3">
-                <div class="input-group-addon">inches</div>
-            </div>
-        </div>
-        </div>
+    <div style="border: 2px solid #006dcc">
+        <div><h2 class="text-center">Corrosion Parameters</h2></div>
+        <hr class="divider">
+        <h3> Cover depth</h3>
         <form class="form-inline">
             <div class="form-group">
-                <div><label for="cover_stdev">Cover Depth Standard Deviation</label></div>
+                <div class="text-center"><label for="cover_mean">Cover Depth Mean</label></div>
+                <div class = "input-group">
+                    <div class="input-group-addon"></div>
+                    <input type="text" class="form-control" id="cover_mean" placeholder="3">
+                    <div class="input-group-addon">inches</div>
+                </div>
+            </div>
+        </form>
+        <form class="form-inline">
+            <div class="form-group">
+                <div class="text-center"><label for="cover_stdev">Cover Depth Standard Deviation</label></div>
                 <div class = "input-group">
                     <div class="input-group-addon"></div>
                     <input type="text" class="form-control" id="cover_stdev" placeholder="1">
@@ -183,151 +196,324 @@
                 </div>
             </div>
         </form>
-    </form>
+        <h3> Diffusivity Input</h3>
+        <p> Select the way in which you would like to input the concrete diffusivity</p>
+        <div class = "tab">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#mix" data-toggle="tab">From Concrete Mix</a></li>
+                <li><a href="#rp" data-toggle="tab">Rapid Permeability</a></li>
+                <li><a href="#diffmanual" data-toggle="tab">Manual Entry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="mix" class="tab-pane fade in active">
+                    <h3>Diffusivity Calculation From Mix design</h3>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="text-center"><label  for="cement_factor">Cement Factor</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="cement_factor" placeholder="1">
+                                <div class="input-group-addon">Kg/m^3</div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="text-center"><label for="wcr">Water to Cement Ratio</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="wcr" placeholder="1">
+                                <div class="input-group-addon">Kg/m^3</div>
+                            </div>
+                        </div>
+                    </form>
+                    <h4>Is there a significant quantity of pozzolanic material added to to the concrete mixture?</h4>
+                    <div class = "btn-group" datatoggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off"> Yes</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" > No</label>
+                    </div>
+                </div>
+                <div id="rp" class="tab-pane">
+                    <h3>Diffusivity Calculation From Rapid Permeability Test Results</h3>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="text-center"><label for="coulombs_average">Coulombs Average</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="coulombs_average" placeholder="1">
+                                <div class="input-group-addon">Coulombs</div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="text-center"><label for="coulombs_stdev">Coulombs Standard Deviation</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="coulombs_stdev" placeholder="1">
+                                <div class="input-group-addon">Coulombs</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="diffmanual" class="tab-pane fade">
+                    <h3>Manual Diffusivity Characteristics Entry</h3>
+                    <form class="form-inline">
+                        <div>
+                            <div class="form-group">
+                                <div class="text-center"><label for="diff_av">Diffusivity average</label></div>
+                                <div class = "input-group">
+                                    <div class="input-group-addon"></div>
+                                    <input type="text" class="form-control" id="diff_av" placeholder="1">
+                                    <div class="input-group-addon">inches^2/year</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="text-center"><label for="diff_stdev">Diffusivity Standard Deviation</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="diff_stdev" placeholder="1">
+                                <div class="input-group-addon">inches^2/year</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <h3> Chloride Threshold</h3>
+        <p>Select the way you would like to enter the chloride threshold for the reinforcing rebar.</p>
+        <div class = "tab">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#fr" data-toggle="tab">From Reinforcement</a></li>
+                <li><a href="#ctmanual" data-toggle="tab">Manual Entry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fr" class="tab-pane fade in active">
+                    <div>What type of steel does the structure contain?</div>
+                    <div class = "btn-group" datatoggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off">Plain Steel</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" >CRR</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" >Stainless</label>
+                    </div>
+                </div>
+                <div id="ctmanual" class="tab-pane fade">
+                    <h3>Manual Chloride Threshold Entry</h3>
+                    <form class="form-inline">
+                        <div>
+                            <div class="form-group">
+                                <div class="text-center"><label for="ct_av">Chloride Threshold Average</label></div>
+                                <div class = "input-group">
+                                    <div class="input-group-addon"></div>
+                                    <input type="text" class="form-control" id="ct_av" placeholder="1">
+                                    <div class="input-group-addon">lbs/yd^3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="text-center"><label for="ct_stdev">Chloride Threshold Standard Deviation</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="ct_stdev" placeholder="1">
+                                <div class="input-group-addon">lbs/yd^3</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <h3> Chloride Surface Concentration</h3>
+        <div class = "tab">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#fe" data-toggle="tab">From Environment</a></li>
+                <li><a href="#csmanual" data-toggle="tab">Manual</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fe" class="tab-pane fade in active">
+                    <div>How aggressive is the environment the structure is in?</div>
+                    <div class = "btn-group" datatoggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off">Very Aggressive</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" >Aggressive</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" >Mild</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" >Deicing Salt Accumulation</label>
+                    </div>
+                </div>
+                <div id="csmanual" class="tab-pane fade">
+                    <h3>Manual Chloride Threshold Entry</h3>
+                    <form class="form-inline">
+                        <div>
+                            <div class="form-group">
+                                <div class="text-center"><label for="cs_av">Chloride Surface Concentration Average</label></div>
+                                <div class = "input-group">
+                                    <div class="input-group-addon"></div>
+                                    <input type="text" class="form-control" id="cs_av" placeholder="1">
+                                    <div class="input-group-addon">lbs/yd^3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="text-center"><label for="cs_stdev">Chloride Threshold Standard Deviation</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="cs_stdev" placeholder="1">
+                                <div class="input-group-addon">lbs/yd^3</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div><h3> Propegation Period</h3>
+            <div class = "tab">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#none" data-toggle="tab">None</a></li>
+                <li><a href="#fc" data-toggle="tab">From Cover</a></li>
+                <li><a href="#ppmanual" data-toggle="tab">Manual</a></li>
+            </ul>
+                <div class="tab-content">
+                    <div id="none" class="tab-pane fade in active">
+                        <div class="col-xs" style="height:50px;"></div>
+                    </div>
+                    <div id="fc" class="tab-pane fade">
+                        <div class="col-xs" style="height:50px;"></div>
+                    </div>
+                    <div id="ppmanual" class="tab-pane fade">
+                        <h3>Manual Propegation Period Entry</h3>
+                        <form class="form-inline">
+                            <div>
+                                <div class="form-group">
+                                    <div class="text-center"><label for="pp_av">Propegation Period  Average</label></div>
+                                    <div class = "input-group">
+                                        <div class="input-group-addon"></div>
+                                        <input type="text" class="form-control" id="pp_av" placeholder="1">
+                                        <div class="input-group-addon">Years</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <div class="text-center"><label for="pp_stdev">Propegation Period Standard Deviation</label></div>
+                                <div class = "input-group">
+                                    <div class="input-group-addon"></div>
+                                    <input type="text" class="form-control" id="pp_stdev" placeholder="1">
+                                    <div class="input-group-addon">Years</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <hr class="divider">
-    <h3> Diffusivity Input</h3>
-    <hr class="divider">
-    <p> Select the way in which you would like to input the concrete diffusivity</p>
-    <div class = "tab">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#mix" data-toggle="tab">From Concrete Mix</a></li>
-            <li><a href="#rp" data-toggle="tab">Rapid Permeability</a></li>
-            <li><a href="#diffmanual" data-toggle="tab">Manual Entry</a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="mix" class="tab-pane fade in active">
-                <h3>Diffusivity Calculation From Mix design</h3>
-                <form class="form-inline">
-                    <div class="form-group">
-                        <div><label for="cement_factor">Cement Factor</label></div>
-                        <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="cement_factor" placeholder="1">
-                            <div class="input-group-addon">Kg/m^3</div>
-                        </div>
-                    </div>
-                </form>
-                <form class="form-inline">
-                    <div class="form-group">
-                        <div><label for="wcr">Water to Cement Ratio</label></div>
-                        <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="wcr" placeholder="1">
-                            <div class="input-group-addon">Kg/m^3</div>
-                        </div>
-                    </div>
-                </form>
-                <h4>Is there a significant quantity of pozzolanic material added to to the concrete mixture?</h4>
-                <div class = "btn-group" datatoggle="buttons">
-                    <label class="btn btn-primary active"><input type="radio" name="options" id="option1" autocomplete="off"> Yes</label>
-                    <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" > No</label>
-                </div>
-            </div>
-            <div id="rp" class="tab-pane">
-                <h3>Diffusivity Calculation From Rapid Permeability Test Results</h3>
-                <form class="form-inline">
-                    <div class="form-group">
-                        <div><label for="coulombs_average">Coulombs Average</label></div>
-                        <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="coulombs_average" placeholder="1">
-                            <div class="input-group-addon">Coulombs</div>
-                        </div>
-                    </div>
-                </form>
-                <form class="form-inline">
-                    <div class="form-group">
-                        <div><label for="coulombs_stdev">Coulombs Standard Deviation</label></div>
-                        <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="coulombs_stdev" placeholder="1">
-                            <div class="input-group-addon">Coulombs</div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div id="diffmanual" class="tab-pane fade">
-                <h3>Manual Diffusivity Characteristics Entry</h3>
-                <form class="form-inline">
-                <div>
-                    <div class="form-group">
-                        <div><label for="diff_av">Diffusivity average</label></div>
-                        <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="diff_av" placeholder="1">
-                            <div class="input-group-addon">inches^2/year</div>
-                        </div>
-                    </div>
-                </div>
-                <form class="form-inline">
-                    <div class="form-group">
-                        <div><label for="diff_av">Diffusivity Standard Deviation</label></div>
-                        <div class = "input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" class="form-control" id="diff_stdev" placeholder="1">
-                            <div class="input-group-addon">inches^2/year</div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <h3> Chloride Threshold</h3>
-    <p>Select the way you would like to enter the chloride threshold for the reinforcing rebar.</p>
-    <div class = "tab">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#fr" data-toggle="tab">From Reinforcement</a></li>
-            <li><a href="#ctmanual" data-toggle="tab">Manual Entry</a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="fr" class="tab-pane fade in active">
-                <div>What type of steel does the structure contain?</div>
-                <div class = "btn-group" datatoggle="buttons">
-                    <label class="btn btn-primary active"><input type="radio" name="options" id="option1" autocomplete="off">Plain Steel</label>
-                    <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" > CRR</label>
-                    <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off" > Stainless</label>
-                </div>
-            </div>
-            <div id="ctmanual" class="tab-pane fade">
-                <p>manual shit</p>
-            </div>
-        </div>
-    </div>
-    <h3> Chloride Surface Concentration</h3>
-    <div class = "dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Chloride Surface Input
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Aggressive</a></li>
-                <li><a href="#">Mild</a></li>
-                <li><a href="#">Manual</a></li>
-    </div>
-    <h3> Propegation Period</h3>
-</div>
+<div class="col-xs" style="height:50px;"></div>
+
 <div class = "container">
-    <hr class="divider">
-    <h2 class="text-center"> Advanced</h2>
-    <hr class="divider">
-    <h3> Cracking</h3>
-    <div class = "dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Cracking Input
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">High</a></li>
-                <li><a href="#">Medium</a></li>
-                <li><a href="#">Low</a></li>
-                <li><a href="#">Manual Entry</a></li>
-    </div>
-    <h3> Nitrite Mineral Admixture Addition</h3>
-    <div class = "dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Admixtures Added?
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">No</a></li>
-                <li><a href="#">Yes</a></li>
+    <div style="border: 2px solid #006dcc">
+        <header class="fixed" role="display: block">
+        <header id="header" role="banner" class="fixed" style="display: block;">
+            <section id="Advanced">
+                <div id="site-title"><h1 class="text-center">Advanced</h1></div>
+            </section>
+        </header>
+        </header>
+        <hr class="divider">
+        <h3> Cracking</h3>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#crnone" data-toggle="tab">None</a></li>
+                <li><a href="#crauto" data-toggle="tab">Automatic</a></li>
+                <li><a href="#crmanual" data-toggle="tab">Manual</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="crnone" class="tab-pane fade in active">
+                    <div class="col-xs" style="height:50px;"></div>
+                </div>
+                <div id="crauto" class="tab-pane fade">
+                    <div>How aggressive is the environment the structure is in?</div>
+                    <div class = "btn-group" datatoggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off">High</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off">Medium</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option1" autocomplete="off">Low</label>
+                    </div>
+                </div>
+                <div id="crmanual" class="tab-pane fade">
+                    <form class="form-inline">
+                        <div>
+                            <div class="form-group">
+                                <div class="text-center"><label for="pp_av">Percentage of Elements With Cracks</label></div>
+                                <div class = "input-group">
+                                    <div class="input-group-addon"></div>
+                                    <input type="text" class="form-control" id="pp_av" placeholder="1">
+                                    <div class="input-group-addon">%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div>
+                            <div class="form-group">
+                                <div class="text-center"><label for="pp_av">Crack Diffusion Ratio Average</label></div>
+                                <div class = "input-group">
+                                    <div class="input-group-addon"></div>
+                                    <input type="text" class="form-control" id="pp_av" placeholder="10">
+                                    <div class="input-group-addon"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="text-center"><label for="pp_stdev">Crack Diffusion Ratio Standard Deviation</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="pp_stdev" placeholder="5">
+                                <div class="input-group-addon"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <h3> Nitrite Mineral Admixture Addition</h3>
+        <p>Are there corrosion inhibitors added to the concrete?</p>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#nmnone" data-toggle="tab">No</a></li>
+                <li><a href="#nmmanual" data-toggle="tab">Yes</a></li>
+            </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="nmnone">
+                <div class="col-xs" style="height:50px;"></div>
+            </div>
+            <div class=" tab-pane fade" id="nmmanual">
+                <form class="form-inline">
+                    <div>
+                        <div class="form-group">
+                            <div class="text-center"><label for="nitriteconc">Nitrite Ion Concentration</label></div>
+                            <div class = "input-group">
+                                <div class="input-group-addon"></div>
+                                <input type="text" class="form-control" id="nitriteconc" placeholder="10">
+                                <div class="input-group-addon">pcy</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
+
+<div class="col-xs" style="height:50px;"></div>
+
+<p> disclaimer and run button</p>
+
+<div class="col-xs" style="height:50px;"></div>
 {% endblock %}
 
 {% block scripts %}
