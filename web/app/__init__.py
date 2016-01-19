@@ -4,7 +4,7 @@ import tornado.web
 
 #from lib.config import config
 from web.app.amiup import AmIUpHandler
-from web.app.home import HomeHandler
+from web.app.home import HomeHandler, HandleDataHandler
 from web.app.slides import *
 
 
@@ -15,6 +15,7 @@ class App(tornado.web.Application):
         handlers = [
             (r"/amiup", AmIUpHandler),
             (r"/", HomeHandler),
+            (r"/data", HandleDataHandler),
         ]
 
         settings = dict(
